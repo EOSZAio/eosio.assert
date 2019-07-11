@@ -1,4 +1,4 @@
-This peoject has been cloned from https://github.com/EOSZAio/eosio.assert
+This peoject has been cloned from https://github.com/EOSIO/eosio.assert
 
 # EOSIO Assert Contract
 
