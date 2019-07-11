@@ -1,7 +1,7 @@
 {
-  "expiration": "2019-07-11T13:01:11",
-  "ref_block_num": 17711,
-  "ref_block_prefix": 1174859319,
+  "expiration": "2019-07-11T17:07:02",
+  "ref_block_num": 47207,
+  "ref_block_prefix": 3753781146,
   "max_net_usage_words": 0,
   "max_cpu_usage_ms": 0,
   "delay_sec": 0,
@@ -10,7 +10,7 @@
       "account": "eosio",
       "name": "setcode",
       "authorization": [{
-          "actor": "eosio",
+          "actor": "eosio.assert",
           "permission": "active"
         }
       ],
@@ -19,7 +19,7 @@
       "account": "eosio",
       "name": "setabi",
       "authorization": [{
-          "actor": "eosio",
+          "actor": "eosio.assert",
           "permission": "active"
         }
       ],

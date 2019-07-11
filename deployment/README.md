@@ -4,7 +4,7 @@
 
 ### Transaction to create eosio.assert
 ```bash
-cleos --url https://api.telos.africa:4443 system newaccount  -sjd --stake-net "0.1000 TLOS" --stake-cpu "0.9000 TLOS" --buy-ram-kbytes 400 --transfer eosio.assert eosio eosio@active eosio@active  > deployment/account.trx.json
+cleos --url https://api.telos.africa:4443 system newaccount -sjd --stake-net "10.0000 TLOS" --stake-cpu "10.0000 TLOS" --buy-ram-kbytes 460 --transfer eosio eosio.assert eosio@active eosio@active -p eosio@active > deployment/account.trx.json
 ```
 
 ### Build eosio.assert contract
@@ -16,7 +16,7 @@ eosio-cpp -Oz -o eosio.assert.wasm -I ./eosio.assert/src -I ./eosio.assert/inclu
 ### Transaction to deploy eosio.assert contract
 
 ```bash
-cleos --url https://api.telos.africa:4443 set contract -sjd eosio.assert ./ -p eosio@active  > deployment/assert.trx.json
+cleos --url https://api.telos.africa:4443 set contract -sjd eosio.assert ./ -p eosio.assert@active  > deployment/assert.trx.json
 ```
 
 ### Merge account creation and contract deployment

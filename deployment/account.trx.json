@@ -1,7 +1,7 @@
 {
-  "expiration": "2019-07-11T13:00:41",
-  "ref_block_num": 17651,
-  "ref_block_prefix": 472382701,
+  "expiration": "2019-07-11T17:06:33",
+  "ref_block_num": 47147,
+  "ref_block_prefix": 2173145356,
   "max_net_usage_words": 0,
   "max_cpu_usage_ms": 0,
   "delay_sec": 0,
@@ -10,29 +10,29 @@
       "account": "eosio",
       "name": "newaccount",
       "authorization": [{
-          "actor": "eosio.assert",
+          "actor": "eosio",
           "permission": "active"
         }
       ],
-      "data": "90afc2d800ea30550000000000ea30550100000000010000000000ea305500000000a8ed32320100000100000000010000000000ea305500000000a8ed3232010000"
+      "data": "0000000000ea305590afc2d800ea30550100000000010000000000ea305500000000a8ed32320100000100000000010000000000ea305500000000a8ed3232010000"
     },{
       "account": "eosio",
       "name": "buyrambytes",
       "authorization": [{
-          "actor": "eosio.assert",
+          "actor": "eosio",
           "permission": "active"
         }
       ],
-      "data": "90afc2d800ea30550000000000ea305500400600"
+      "data": "0000000000ea305590afc2d800ea305500300700"
     },{
       "account": "eosio",
       "name": "delegatebw",
       "authorization": [{
-          "actor": "eosio.assert",
+          "actor": "eosio",
           "permission": "active"
         }
       ],
-      "data": "90afc2d800ea30550000000000ea3055e80300000000000004544c4f53000000282300000000000004544c4f5300000001"
+      "data": "0000000000ea305590afc2d800ea3055a08601000000000004544c4f53000000a08601000000000004544c4f5300000001"
     }
   ],
   "transaction_extensions": [],
