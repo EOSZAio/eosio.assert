@@ -30,6 +30,12 @@ Transactions from these files have been merged into a single file so that all tr
 
 ## Propose transaction
 
+### Stagenet
+```bash
+cleos --url http://stagenet.telosusa.io multisig propose_trx eosio.assert eosio@active ./deployment/trx.json rorymapatone -p rorymapstone@active
+```
+
+### Mainnet
 ```bash
 cleos --url https://api.telos.africa:4443 multisig propose_trx eosio.assert eosio@active ./deployment/trx.json rorymapatone -p rorymapstone@active
 ```

@@ -1,3 +1,5 @@
+This peoject has been cloned from https://github.com/EOSZAio/eosio.assert
+
 # EOSIO Assert Contract
 
 The EOSIO Assert Contract is a security feature to reduce the need for users to trust blockchain apps when a user signs a transaction for a trusted blockchain network with a trusted wallet application. It is a solution aiming to:
