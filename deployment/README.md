@@ -40,6 +40,14 @@ cleos --url <API> multisig approve southafrica1 assertcreate '{"actor": "YOU", "
 cleos --url http://testnet.telos.africa:8887 multisig approve southafrica1 assertcreate '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
 ```
 
+## Execute transaction
+
+```bash
+cleos  --url <API> multisig exec southafrica1 assertcreate YOU -p YOU
+
+cleos  --url http://testnet.telos.africa:8887 multisig exec southafrica1 assertcreate southafrica1 -p southafrica1
+```
+
 ---
 ## Build multisig transaction to deploy eosio.assert
 
