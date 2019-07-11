@@ -1,0 +1,41 @@
+{
+  "expiration": "2019-07-11T13:00:41",
+  "ref_block_num": 17651,
+  "ref_block_prefix": 472382701,
+  "max_net_usage_words": 0,
+  "max_cpu_usage_ms": 0,
+  "delay_sec": 0,
+  "context_free_actions": [],
+  "actions": [{
+      "account": "eosio",
+      "name": "newaccount",
+      "authorization": [{
+          "actor": "eosio.assert",
+          "permission": "active"
+        }
+      ],
+      "data": "90afc2d800ea30550000000000ea30550100000000010000000000ea305500000000a8ed32320100000100000000010000000000ea305500000000a8ed3232010000"
+    },{
+      "account": "eosio",
+      "name": "buyrambytes",
+      "authorization": [{
+          "actor": "eosio.assert",
+          "permission": "active"
+        }
+      ],
+      "data": "90afc2d800ea30550000000000ea305500400600"
+    },{
+      "account": "eosio",
+      "name": "delegatebw",
+      "authorization": [{
+          "actor": "eosio.assert",
+          "permission": "active"
+        }
+      ],
+      "data": "90afc2d800ea30550000000000ea3055e80300000000000004544c4f53000000282300000000000004544c4f5300000001"
+    }
+  ],
+  "transaction_extensions": [],
+  "signatures": [],
+  "context_free_data": []
+}
