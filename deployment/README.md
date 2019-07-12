@@ -4,30 +4,34 @@
 
 * Stagenet : http://stagenet.telosusa.io
 * Testnet  : http://testnet.telos.africa:8887
-* Mainnet  : https://api.telos.africa:4443
+* Mainnet  : API="--url https://api.telos.africa:4443"
+
+#Step 0
+
+## Funding for account creation
 
 ```bash
-echo curl -X POST http://testnet.telos.africa:8887/v1/chain/get_account -H \'Content-Type: application/json\' -d \'{"\""account_name"\"":"\""eosio.prods"\""}\' \| jq [\'.permissions[0].required_auth.accounts[].permission]\' | bash - > deployment/signatories.json
+cleos $API push action eosio.token transfer '[ "southafrica1", "eosio", "100.0000 TLOS", "Funding for resources required to create eosio.assert account" ]' -p southafrica1@active
 ```
 
-NB need all active producers because of rotation schedule on testnet
+#Step 1
 
 ## Build multisig transaction to create eosio.assert
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 system newaccount -sjd --stake-net "10.0000 TLOS" --stake-cpu "10.0000 TLOS" --buy-ram-kbytes 300 --transfer eosio eosio.assert eosio@active eosio@active -p eosio@active > deployment/account.trx.json
+cleos $API system newaccount -sjd --stake-net "10.0000 TLOS" --stake-cpu "10.0000 TLOS" --buy-ram-kbytes 300 --transfer eosio eosio.assert eosio@active eosio@active -p eosio@active > deployment/account.trx.json
 ```
 
 ## Propose creation of eosio.assert account
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig propose_trx assertcreate ./deployment/signatories.json ./deployment/account.trx.json southafrica1 -p southafrica1@active
+cleos $API multisig propose_trx assertcreate ./deployment/signatories.json ./deployment/account.trx.json southafrica1 -p southafrica1@active
 ```
 
 ## Review transaction
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig review southafrica1 assertcreate
+cleos $API multisig review southafrica1 assertcreate
 ```
 
 ## Approve transaction
@@ -37,7 +41,7 @@ cleos --url <API> multisig approve southafrica1 assertcreate '{"actor": "YOU", "
 ```
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig approve southafrica1 assertcreate '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
+cleos $API multisig approve southafrica1 assertcreate '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
 ```
 
 ## Execute transaction
@@ -45,10 +49,12 @@ cleos --url http://testnet.telos.africa:8887 multisig approve southafrica1 asser
 ```bash
 cleos  --url <API> multisig exec southafrica1 assertcreate YOU -p YOU
 
-cleos  --url http://testnet.telos.africa:8887 multisig exec southafrica1 assertcreate southafrica1 -p southafrica1
+cleos  $API multisig exec southafrica1 assertcreate southafrica1 -p southafrica1
 ```
 
 ---
+#Step 2
+
 ## Build multisig transaction to deploy eosio.assert
 
 ### Build eosio.assert contract
@@ -60,19 +66,19 @@ eosio-cpp -Oz -o eosio.assert.wasm -I ./eosio.assert/src -I ./eosio.assert/inclu
 ## Transaction to deploy eosio.assert contract
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 set contract -sjd eosio.assert ./ -p eosio.assert@active  > deployment/assert.trx.json
+cleos $API set contract -sjd eosio.assert ./ -p eosio.assert@active  > deployment/assert.trx.json
 ```
 
 ## Propose deployment of eosio.assert contract code
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig propose_trx assertdeploy ./deployment/signatories.json ./deployment/assert.trx.json southafrica1 -p southafrica1@active
+cleos $API multisig propose_trx assertdeploy ./deployment/signatories.json ./deployment/assert.trx.json southafrica1 -p southafrica1@active
 ```
 
 ## Review transaction
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig review southafrica1 assertdeploy
+cleos $API multisig review southafrica1 assertdeploy
 ```
 
 ## Approve transaction
@@ -82,5 +88,5 @@ cleos --url <API> multisig approve southafrica1 assertcreate '{"actor": "YOU", "
 ```
 
 ```bash
-cleos --url http://testnet.telos.africa:8887 multisig approve southafrica1 assertdeploy '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
+cleos $API multisig approve southafrica1 assertdeploy '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
 ```
