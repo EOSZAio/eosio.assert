@@ -6,7 +6,7 @@
 * Testnet  : http://testnet.telos.africa:8887
 * Mainnet  : API="--url https://api.telos.africa:4443"
 
-#Step 0
+# Step 0
 
 ## Funding for account creation
 
@@ -14,7 +14,8 @@
 cleos $API push action eosio.token transfer '[ "southafrica1", "eosio", "100.0000 TLOS", "Funding for resources required to create eosio.assert account" ]' -p southafrica1@active
 ```
 
-#Step 1
+---
+# Step 1
 
 ## Build multisig transaction to create eosio.assert
 
@@ -53,7 +54,7 @@ cleos  $API multisig exec southafrica1 assertcreate southafrica1 -p southafrica1
 ```
 
 ---
-#Step 2
+# Step 2
 
 ## Build multisig transaction to deploy eosio.assert
 
