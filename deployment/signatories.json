@@ -4,11 +4,15 @@
     "permission": "active"
   },
   {
+    "actor": "telosdacnode",
+    "permission": "active"
+  },
+  {
     "actor": "telosmiamibp",
     "permission": "active"
   },
   {
-    "actor": "telosdacnode",
+    "actor": "telosmadrid1",
     "permission": "active"
   },
   {
@@ -16,15 +20,11 @@
     "permission": "active"
   },
   {
+    "actor": "telosgreenbp",
+    "permission": "active"
+  },
+  {
     "actor": "telosglobal1",
-    "permission": "active"
-  },
-  {
-    "actor": "tlsvenezuela",
-    "permission": "active"
-  },
-  {
-    "actor": "theteloscope",
     "permission": "active"
   },
   {
@@ -36,27 +36,7 @@
     "permission": "active"
   },
   {
-    "actor": "telosmadrid1",
-    "permission": "active"
-  },
-  {
-    "actor": "telosgreenbp",
-    "permission": "active"
-  },
-  {
-    "actor": "eosmetaliobp",
-    "permission": "active"
-  },
-  {
-    "actor": "votedutcheos",
-    "permission": "active"
-  },
-  {
-    "actor": "eosbarcelona",
-    "permission": "active"
-  },
-  {
-    "actor": "eosphereiobp",
+    "actor": "tlsvenezuela",
     "permission": "active"
   },
   {
@@ -64,19 +44,7 @@
     "permission": "active"
   },
   {
-    "actor": "teloscentral",
-    "permission": "active"
-  },
-  {
-    "actor": "octagontelos",
-    "permission": "active"
-  },
-  {
-    "actor": "atticlabtlbp",
-    "permission": "active"
-  },
-  {
-    "actor": "21zephyr1111",
+    "actor": "eosphereiobp",
     "permission": "active"
   },
   {
@@ -84,23 +52,23 @@
     "permission": "active"
   },
   {
-    "actor": "tlsvancouver",
+    "actor": "eosmetaliobp",
     "permission": "active"
   },
   {
-    "actor": "eostribeprod",
+    "actor": "eosbarcelona",
     "permission": "active"
   },
   {
-    "actor": "telosgermany",
+    "actor": "21zephyr1111",
     "permission": "active"
   },
   {
-    "actor": "eosdublinwow",
+    "actor": "theteloscope",
     "permission": "active"
   },
   {
-    "actor": "eosvibesbloc",
+    "actor": "teloscentral",
     "permission": "active"
   },
   {
@@ -108,35 +76,7 @@
     "permission": "active"
   },
   {
-    "actor": "kainosblkpro",
-    "permission": "active"
-  },
-  {
-    "actor": "eosiodetroit",
-    "permission": "active"
-  },
-  {
-    "actor": "csxcommunity",
-    "permission": "active"
-  },
-  {
-    "actor": "swedencornet",
-    "permission": "active"
-  },
-  {
-    "actor": "nebulablocks",
-    "permission": "active"
-  },
-  {
-    "actor": "votetelosusa",
-    "permission": "active"
-  },
-  {
-    "actor": "telosnewyork",
-    "permission": "active"
-  },
-  {
-    "actor": "teloscantons",
+    "actor": "eosvibesbloc",
     "permission": "active"
   },
   {
@@ -144,7 +84,47 @@
     "permission": "active"
   },
   {
-    "actor": "telosvoyager",
+    "actor": "bigironbptex",
+    "permission": "active"
+  },
+  {
+    "actor": "eosiodetroit",
+    "permission": "active"
+  },
+  {
+    "actor": "votetelosusa",
+    "permission": "active"
+  },
+  {
+    "actor": "telosgermany",
+    "permission": "active"
+  },
+  {
+    "actor": "atticlabtlbp",
+    "permission": "active"
+  },
+  {
+    "actor": "eosdublinwow",
+    "permission": "active"
+  },
+  {
+    "actor": "nebulablocks",
+    "permission": "active"
+  },
+  {
+    "actor": "eostribeprod",
+    "permission": "active"
+  },
+  {
+    "actor": "votedutcheos",
+    "permission": "active"
+  },
+  {
+    "actor": "telosnewyork",
+    "permission": "active"
+  },
+  {
+    "actor": "csxcommunity",
     "permission": "active"
   },
   {
@@ -152,15 +132,15 @@
     "permission": "active"
   },
   {
-    "actor": "tokenika4tls",
+    "actor": "telosvoyager",
     "permission": "active"
   },
   {
-    "actor": "eosvenezuela",
+    "actor": "octagontelos",
     "permission": "active"
   },
   {
-    "actor": "telawakeiobp",
+    "actor": "teloscantons",
     "permission": "active"
   },
   {
@@ -168,15 +148,11 @@
     "permission": "active"
   },
   {
+    "actor": "swedencornet",
+    "permission": "active"
+  },
+  {
     "actor": "blocksmithio",
-    "permission": "active"
-  },
-  {
-    "actor": "bigironbptex",
-    "permission": "active"
-  },
-  {
-    "actor": "teleclipse24",
     "permission": "active"
   },
   {
@@ -184,15 +160,15 @@
     "permission": "active"
   },
   {
-    "actor": "eossandiego1",
+    "actor": "teleclipse24",
     "permission": "active"
   },
   {
-    "actor": "bpeosindexio",
+    "actor": "telawakeiobp",
     "permission": "active"
   },
   {
-    "actor": "beyondbtctls",
+    "actor": "eosvenezuela",
     "permission": "active"
   },
   {
@@ -200,7 +176,31 @@
     "permission": "active"
   },
   {
+    "actor": "tokenika4tls",
+    "permission": "active"
+  },
+  {
+    "actor": "bpeosindexio",
+    "permission": "active"
+  },
+  {
     "actor": "sanfranc1sco",
+    "permission": "active"
+  },
+  {
+    "actor": "eossandiego1",
+    "permission": "active"
+  },
+  {
+    "actor": "telosarabia1",
+    "permission": "active"
+  },
+  {
+    "actor": "teloskitchen",
+    "permission": "active"
+  },
+  {
+    "actor": "telosboston1",
     "permission": "active"
   }
 ]

@@ -4,7 +4,7 @@
 
 * Stagenet : http://stagenet.telosusa.io
 * Testnet  : http://testnet.telos.africa:8887
-* Mainnet  : API="--url https://api.telos.africa:4443"
+* Mainnet  : API="--url https://history.telos.africa:3443"
 
 # Step 0
 
@@ -33,7 +33,9 @@ cleos $API multisig propose_trx assertcreate ./deployment/signatories.json ./dep
 
 ```bash
 cleos $API multisig review southafrica1 assertcreate
-```
+
+cleos $API multisig cancel southafrica1 assertcreate -p southafrica1@active
+ ```
 
 ## Approve transaction
 
@@ -58,6 +60,10 @@ cleos  $API multisig exec southafrica1 assertcreate southafrica1 -p southafrica1
 
 ## Build multisig transaction to deploy eosio.assert
 
+### Signatories
+
+Determined manually
+
 ### Build eosio.assert contract
 
 ```bash
@@ -73,21 +79,31 @@ cleos $API set contract -sjd eosio.assert ./ -p eosio.assert@active  > deploymen
 ## Propose deployment of eosio.assert contract code
 
 ```bash
-cleos $API multisig propose_trx assertdeploy ./deployment/signatories.json ./deployment/assert.trx.json southafrica1 -p southafrica1@active
+cleos $API  system buyram southafrica1 southafrica1 --kbytes 30 -p southafrica1@active
+
+cleos $API multisig propose_trx deployassert ./deployment/signatories.json ./deployment/assert.trx.json southafrica1 -p southafrica1@active
+```
+
+## Cancel transaction
+
+```bash
+cleos $API multisig cancel southafrica1 deployassert
+
+cleos $API multisig cancel southafrica1 deployassert -p southafrica1@active
 ```
 
 ## Review transaction
 
 ```bash
-cleos $API multisig review southafrica1 assertdeploy
+cleos $API multisig review southafrica1 deployassert
 ```
 
 ## Approve transaction
 
 ```bash
-cleos --url <API> multisig approve southafrica1 assertcreate '{"actor": "YOU", "permission": "active"}' -p YOU@active
+cleos --url <API> multisig approve southafrica1 deployassert '{"actor": "YOU", "permission": "active"}' -p YOU@active
 ```
 
 ```bash
-cleos $API multisig approve southafrica1 assertdeploy '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
+cleos $API multisig approve southafrica1 deployassert '{"actor": "southafrica1", "permission": "active"}' -p southafrica1@active
 ```
